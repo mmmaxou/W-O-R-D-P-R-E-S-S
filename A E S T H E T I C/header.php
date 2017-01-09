@@ -26,6 +26,9 @@
 <body <?php body_class(); ?>>
 
 <?php 
-    
+        wp_nav_menu(array(
+        'theme_location'=> 'nav-main',
+        'menu_class'=>'nav nav-main'
+    ));
     get_template_part('partials/banner');
     ?>

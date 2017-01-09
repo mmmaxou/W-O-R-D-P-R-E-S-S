@@ -8,27 +8,25 @@
 
 
 <?php get_header();
-
-$query = new WP_Query()
-
 ?>
 
 <main class="container" role="main">
   <div class="row">
     <div class="col-md-9">
         <h1>Here come da boi</h1>
-        <?php if ( have_posts() ) : while ( have_posts() ) : the_post();
-        
-//        the_title('<h1>','</h1>');
-        get_template_part('partials/content');
+        <?php 
         query_posts(array(
-            'post_type' => 'event',
+            'post_type' => 'event'
         ));
-
-        wp_reset_query();
+        
+        if ( have_posts() ) : while ( have_posts() ) : the_post();        
+//        the_title('<h1>','</h1>');
+            get_template_part('partials/content', 'events');
+        
         
         //End the loop
-        endwhile; endif; ?>
+        endwhile; endif; 
+        wp_reset_query();?>
       <!-- La boucle -->
     </div>
     <div class="col-md-3">

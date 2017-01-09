@@ -1,10 +1,7 @@
 <?php get_header(); ?>
 
 <?php 
-    wp_nav_menu(array(
-        'theme_location'=> 'nav-main',
-        'menu_class'=>'nav nav-main'
-    ));
+
 ?>
 
 <main class="container" role="main">

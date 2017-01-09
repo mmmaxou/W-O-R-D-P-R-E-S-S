@@ -18,18 +18,18 @@
     <div class="col-md-9">
 <!--        <h1>Hey coucou ! Tu aimes les poneys ?</h1>-->
         <?php 
-//        query_posts(array(
-//            'post_type' => 'event'
-//        ));
+        query_posts(array(
+            'post_type' => 'event'
+        ));
         
         if ( have_posts() ) : while ( have_posts() ) : the_post();        
 //        the_title('<h1>','</h1>');
-//        get_template_part('partials/content');
+        get_template_part('partials/content');
         
-        wp_reset_query();
         
         //End the loop
         endwhile; endif; ?>
+        wp_reset_query();
       <!-- La boucle -->
     </div>
     <div class="col-md-3">
